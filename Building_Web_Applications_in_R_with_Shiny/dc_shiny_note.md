@@ -1,6 +1,6 @@
 Github Repo: https://github.com/enliktjioe/datacamp
 
-### Chapter 1 - Introduction and Shiny basics
+# Chapter 1 - Introduction and Shiny basics
 **Tips**
 * Always run the entire script, not just up to the point where you’re developing code
 * Sometimes the best way to see what’s wrong is to run the app and review the error
@@ -45,3 +45,13 @@ server <- function(input, output) {
 1. Save objects to display to `output$xx`
 2. Build objects to display with `render*()`
 3. Use input values with `input$xx`
+
+
+## RECAP
+* UI built by HTML, CSS, JS
+* Shiny don't require you to learn HTML, CSS, JS
+* R Server instructions
+
+
+# Chapter 2 - Inputs, outputs, and rendering functions
+
