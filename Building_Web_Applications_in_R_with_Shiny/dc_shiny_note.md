@@ -7,3 +7,22 @@ Github Repo: https://github.com/enliktjioe/datacamp
 * Watch out for commas!
 
 ## Anatomy of a Shiny app
+```R
+library(shiny)
+
+## User Interface - controls the layout and appearance of app
+ui <- fluidPage()
+
+## Server functio - contains instructions needed to build app
+server <- function(input, output) {}
+
+
+## shinyApp() - Creates the Shiny app object
+shinyApp(ui = ui, server = server)
+```
+
+## Data
+Simple movie browser app
+movies.Rdata
+Data from IMDB and Rotten Tomatoes on random samples
+
