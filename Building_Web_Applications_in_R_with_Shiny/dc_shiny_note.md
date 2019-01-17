@@ -1,6 +1,6 @@
 Github Repo: https://github.com/enliktjioe/datacamp
 
-## Chapter 1 - Introduction and Shiny basics
+### Chapter 1 - Introduction and Shiny basics
 **Tips**
 * Always run the entire script, not just up to the point where you’re developing code
 * Sometimes the best way to see what’s wrong is to run the app and review the error
@@ -13,7 +13,7 @@ library(shiny)
 ## User Interface - controls the layout and appearance of app
 ui <- fluidPage()
 
-## Server functio - contains instructions needed to build app
+## Server function - contains instructions needed to build app
 server <- function(input, output) {}
 
 
@@ -22,7 +22,26 @@ shinyApp(ui = ui, server = server)
 ```
 
 ## Data
-Simple movie browser app
-movies.Rdata
-Data from IMDB and Rotten Tomatoes on random samples
+* Simple movie browser app
+* movies.Rdata
+* Data from IMDB and Rotten Tomatoes on random samples
 
+
+## Server function
+```R
+server <- function(input, output) {
+
+	# Create the scatterplot object the plotOutput function is expecting
+	output$scatterplot <- renderPlot({
+			# Good ol' ggplot2 code, with inputs from UI
+			ggplot(data = movies, aes_string(x = input$x, y = input$y)) +
+			geom_point()
+
+		})
+}
+```
+
+### Rules of server functions
+1. Save objects to display to `output$xx`
+2. Build objects to display with `render*()`
+3. Use input values with `input$xx`
