@@ -52,6 +52,14 @@ server <- function(input, output) {
 * Shiny don't require you to learn HTML, CSS, JS
 * R Server instructions
 
+<br />
+<br />
 
 # Chapter 2 - Inputs, outputs, and rendering functions
 
+## checkboxInput
+1. **ui**: Add an input widget that the user can intercact with to check/uncheck the box
+2. **ui**: Add an output defining wehere the data table should appear
+3. **server**: Add a reactive expression that creates the data table *if* the checkbox is checked.
+
+ 
